@@ -4,40 +4,15 @@ using namespace std;
 
 int main()
 {
-    int i, j, rows;
-   cout <<"Enter the number of columns";
-   cin >>rows ;
+   int i, j, rows;
+   cout <<"Input the number"<<"\n";
+   cin >> rows ;
+   if(rows%2==0)
+    rows-=1;
+    j=1;
    for (i = 1; i <= rows; ++i) {
-           if(i%2!=0)
-           {
-              for (j = 1; j <= i; ++j) {
-              cout<<j;
-            }
-           }
-            if(i%2==0)
-            {
-              for (j = i; j >= 1; --j) {
-              cout<<j;
-            }
-            }
-       
-     cout << "\n";
-   }   for (i = rows-1; i >= 1; --i) {
-           if(i%2!=0)
-           {
-              for (j = 1; j <= i; ++j) {
-              cout<<j;
-            }
-           }
-            if(i%2==0)
-            {
-              for (j = i; j >= 1; --j) {
-              cout<<j;
-            }
-            }
-       
-      printf("\n");
+         cout<<j++<<"\t";
+         j++;
    }
-
     return 0;
 }
